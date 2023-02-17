@@ -1,0 +1,68 @@
+.plans .box > div {
+  color: white;
+  padding: 30px 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  font-weight: 500;
+  font-size: 40px;
+  border: 3px solid white;
+}
+.plans .box.free > div {
+  outline: 3px solid var(--green);
+  background-color: var(--green);
+}
+.plans .box.basic > div {
+  outline: 3px solid var(--blue-alt);
+  background-color: var(--blue-alt);
+}
+.plans .box.premium > div {
+  outline: 3px solid var(--orange);
+  background-color: var(--orange);
+}
+.plans .box > div > span:first-child {
+  font-size: 25px;
+  font-weight: 600;
+}
+.plans .box ul li {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 5px;
+  border-bottom: 1px solid #eee;
+  font-weight: 500;
+  font-size: 15px;
+}
+.plans .box i.check {
+  color: var(--green);
+}
+.plans .box i.xmark {
+  color: var(--red);
+}
+.plans .box i.info {
+  color: #888;
+}
+.plans .box > a {
+  width: fit-content;
+  display: block;
+  margin-top: 20px;
+  color: white;
+  padding: 5px 10px;
+  font-weight: 500;
+  border-radius: 5px;
+}
+.plans .box.free > a {
+  background-color: var(--green);
+}
+.plans .box.basic > a {
+  background-color: var(--blue-alt);
+}
+.plans .box.premium > a {
+  background-color: var(--orange);
+}
+.plans .box > p:last-child {
+  margin-top: 10px;
+  text-align: center;
+  color: #888;
+}

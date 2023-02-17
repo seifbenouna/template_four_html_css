@@ -1,0 +1,151 @@
+.search-bar + div .boxes {
+  display: flex;
+  flex-wrap: wrap;
+}
+/*part1 info*/
+.profile .box.informations {
+  padding-right: 0;
+  flex-grow: 3;
+  display: flex;
+  align-items: center;
+}
+.profile .informations .logo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 15px;
+  padding: 40px;
+  border-right: 1px solid var(--grey-border);
+  height: fit-content;
+}
+.profile .informations .logo img {
+  width: 120px;
+}
+.profile .informations .logo > span:first-of-type {
+  font-size: 20px;
+  font-weight: 500;
+}
+.profile .informations .logo > span:first-of-type + span {
+  color: var(--grey-color);
+  font-weight: 500;
+}
+.profile .informations .logo > span:nth-of-type(3),
+.profile .informations .logo > span:nth-of-type(3) > span {
+  width: 150px;
+  height: 6px;
+  border-radius: 10px;
+}
+.profile .informations .logo > span:nth-of-type(3) {
+  background-color: #eee;
+}
+.profile .informations .logo > span:nth-of-type(3) > span {
+  display: block;
+  width: 70%;
+  background-color: var(--blue-alt);
+}
+.profile .informations .logo > p {
+  color: var(--grey-color);
+  font-size: 13px;
+}
+.profile .informations .logo i {
+  font-size: 14px;
+}
+.profile .informations .logo i.filled {
+  color: var(--orange);
+}
+.profile .informations .logo i.empty {
+  color: var(--grey-color);
+}
+/*part2 info*/
+.profile .informations .toggle-switch {
+  height: 19px;
+}
+.profile .informations .toggle-switch::before {
+  width: 13px;
+  height: 13px;
+  top: 3px;
+  font-size: 8px;
+}
+.profile .informations .toggle-checkbox:checked + .toggle-switch:before {
+  left: 60px;
+}
+.profile .informations .info .detail > span:nth-of-type(2) {
+  color: black;
+}
+.profile .informations .info {
+  font-size: 14px;
+  font-weight: 500;
+  color: var(--grey-color);
+  padding: 20px 0 0 20px;
+}
+.profile .informations .info:not(:last-of-type) {
+  border-bottom: 1px solid var(--grey-border);
+}
+.profile .informations .info .details {
+  padding: 20px 0;
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+}
+.profile .informations .info .details .detail {
+  min-width: 250px;
+}
+/*end info*/
+/*start skills*/
+.profile .skills {
+  flex-grow: 1;
+}
+.profile .skills > div > div:not(:last-of-type) {
+  border-bottom: 1px solid #eee;
+}
+.profile .skills > div > div {
+  padding: 20px;
+  text-align: center;
+}
+.profile .skills > div > div > span {
+  background-color: #eee;
+  margin: 0 10px;
+  padding: 5px 8px;
+  border-radius: 5px;
+}
+/*end skills*/
+/*start activity*/
+.profile .activities {
+  flex-grow: 5;
+}
+.profile .activities img {
+  max-width: 60px;
+}
+.profile .activities > div > div:not(:last-of-type) {
+  border-bottom: 1px solid #eee;
+}
+.profile .activities > div > div {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 20px 0;
+}
+.profile .activities > div p {
+  color: var(--grey-color);
+  padding-top: 20px;
+}
+.profile .activities .text {
+  flex: 1;
+}
+.profile .activities .text > div {
+  display: flex;
+  justify-content: space-between;
+}
+/*end activity*/
+@media (max-width: 768px) {
+  .profile .box.informations {
+    display: block;
+    grid-column: 1;
+  }
+  .profile .informations .info .details {
+    flex-direction: column;
+    justify-content: center;
+  }
+}

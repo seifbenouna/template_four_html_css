@@ -1,0 +1,66 @@
+.search-bar + div .boxes {
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+}
+.search-bar + div .box {
+  padding: 0;
+  overflow: hidden;
+  position: relative;
+}
+/**/
+.courses .box .icon {
+  overflow: hidden;
+  position: absolute;
+  content: "";
+  top: 20px;
+  left: 20px;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  border: 3px solid white;
+}
+.courses .box img {
+  max-width: 100%;
+  width: 100%;
+}
+.courses .box .text {
+  padding: 20px;
+}
+.courses .box .text > p {
+  margin-top: 20px;
+  color: #777;
+  font-size: 14px;
+  line-height: 1.5;
+}
+.courses .box .text > .link {
+  text-align: center;
+  margin-top: 30px;
+  position: relative;
+  z-index: 1;
+}
+.courses .box .text > .link::before {
+  position: absolute;
+  content: "";
+  width: calc(100% + 40px);
+  height: 1px;
+  top: 50%;
+  left: -20px;
+  background-color: #eee;
+  z-index: -1;
+}
+.courses .box .text > .link a {
+  background-color: rgb(32, 119, 250);
+  padding: 5px 10px;
+  font-size: 14px;
+  color: white;
+  font-weight: 500;
+  border-radius: 6px;
+}
+.courses .box .text > .link + div {
+  display: flex;
+  justify-content: space-between;
+}
+.courses .box .text > .link + div span {
+  color: #777;
+  font-weight: 500;
+  font-size: 14px;
+}

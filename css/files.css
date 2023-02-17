@@ -1,0 +1,97 @@
+.search-bar + div .boxes {
+  width: calc(100% - 250px);
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+}
+/**/
+.files .box {
+  font-size: 14px;
+  font-weight: 500;
+  color: #777;
+}
+.files .box > div:first-of-type {
+  position: relative;
+  text-align: center;
+  padding-bottom: 40px;
+  border-bottom: 1px solid #eee;
+}
+.files .box img {
+  max-width: 60px;
+  margin-bottom: 20px;
+}
+.files .box img + p {
+  font-size: 15px;
+  color: black;
+}
+.files .box img + p + i,
+.files .box img + p + i + span {
+  position: absolute;
+  content: "";
+  left: 0;
+}
+.files .box img + p + i {
+  top: 0;
+}
+.files .box img + p + i + span {
+  bottom: 10px;
+}
+.files .box > div:first-of-type + div {
+  padding: 10px 0 0;
+  display: flex;
+  justify-content: space-between;
+}
+.files > div {
+  display: flex;
+  gap: 20px;
+}
+.files .statistics {
+  width: 250px;
+  padding: 20px;
+  margin-top: 40px;
+  background-color: white;
+  height: fit-content;
+}
+.files .statistics div {
+  font-size: 14px;
+  border-radius: 5px;
+  font-weight: 500;
+  margin-top: 15px;
+  padding: 10px;
+  border: 1px solid #eee;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.files .statistics div p {
+  color: #777;
+}
+.files .statistics div > img {
+  max-width: 40px;
+}
+.files .statistics div > span {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  flex: 1;
+  margin-left: 10px;
+}
+.files .statistics a {
+  display: block;
+  width: fit-content;
+  margin-left: auto;
+  margin-right: auto;
+  font-weight: 500;
+  color: white;
+  background-color: var(--blue-alt);
+  padding: 10px 20px;
+  border-radius: 5px;
+  margin-top: 20px;
+}
+@media (max-width: 768px) {
+  .files > div {
+    flex-direction: column-reverse;
+  }
+  .search-bar + div .boxes,
+  .files .statistics {
+    width: 100%;
+  }
+}

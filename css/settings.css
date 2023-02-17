@@ -1,0 +1,242 @@
+input,
+textarea {
+  font-size: 13px;
+  border-radius: 5px;
+  border: 1px solid var(--grey-border);
+  width: 100%;
+  padding: 10px;
+}
+.box p,
+.general label {
+  font-size: 14px;
+  color: var(--grey-color);
+  margin-top: 10px;
+  font-weight: 500;
+}
+label {
+  display: flex;
+  /* justify-content: center;
+  align-items: center;
+  flex-wrap: wrap; */
+  cursor: pointer;
+}
+/*start control*/
+.control > div {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+}
+.control textarea {
+  resize: var(--grey-color);
+  height: 150px;
+  margin-top: 20px;
+}
+/*end control*/
+/*start general*/
+.general input {
+  margin-bottom: 20px;
+  margin-top: 5px;
+}
+.general label {
+  display: block;
+}
+.general input[type="email"] {
+  width: calc(100% - 80px);
+}
+.general a {
+  display: inline-block;
+  width: 75px;
+  text-align: center;
+  color: var(--blue-alt);
+}
+/*end general*/
+/*start security*/
+.security > div {
+  padding: 20px 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+}
+.security > div:not(:last-of-type) {
+  border-bottom: 1px solid var(--grey-border);
+}
+.security > div > a {
+  padding: 8px 10px;
+  border-radius: 5px;
+  font-weight: 500;
+}
+.security > div:first-of-type > a {
+  background-color: var(--blue-alt);
+  color: white;
+}
+.security > div:last-of-type > a {
+  background-color: #ddd;
+}
+/*end security*/
+/*start social*/
+.social form > div {
+  margin-top: 20px;
+}
+.social input,
+.social div > i {
+  background-color: #f6f6f6;
+}
+.social input {
+  border-top-left-radius: 0;
+  border-bottom-left-radius: 0;
+}
+.social form > div {
+  display: flex;
+  align-items: center;
+  flex-direction: row-reverse;
+}
+.social div > i {
+  color: #888;
+  border-radius: 5px;
+  width: 37px;
+  height: 37px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid var(--grey-border);
+}
+.social div > i {
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 0;
+}
+.social form > div:focus i {
+  color: black;
+}
+/*end social*/
+/*start widget*/
+.widgets input[type="checkbox"] {
+  /* -ms-progress-appearance: none;
+  appearance: none; */
+  display: none;
+}
+.widgets .toggle-check {
+  width: 18px;
+  height: 18px;
+  border: 2px solid #888;
+  border-radius: 3px;
+  margin-right: 10px;
+  cursor: pointer;
+  position: relative;
+}
+.widgets .toggle-check::before,
+.widgets .toggle-check::after {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) rotate(-360deg);
+  transition: 0.2s;
+}
+.widgets .toggle-check::after {
+  content: "\f00c";
+  font-family: var(--font-awesome-family);
+  font-weight: 900;
+  color: white;
+  width: fit-content;
+  height: fit-content;
+}
+.widgets .toggle-check::before {
+  content: "";
+  background-color: var(--blue-alt);
+  width: 0;
+  height: 0;
+}
+.widgets input:checked + .toggle-check:before {
+  width: 100%;
+  height: 100%;
+  transform: translate(-50%, -50%) rotate(0deg);
+}
+.widgets input:checked + .toggle-check::after {
+  transform: translate(-50%, -50%) rotate(0deg);
+}
+.widgets .toggle-check:hover,
+.widgets input:checked + .toggle-check {
+  border-color: var(--blue-alt);
+}
+.widgets label {
+  width: fit-content;
+  margin-top: 20px;
+}
+/*end widget*/
+/*start backup*/
+.backup label {
+  margin-top: 10px;
+  display: flex;
+  width: fit-content;
+  cursor: pointer;
+}
+.backup input[type="radio"] {
+  display: none;
+}
+.backup .toggle-radio {
+  margin-right: 10px;
+  width: 24px;
+  height: 24px;
+  border: 2px solid var(--grey-border);
+  border-radius: 50%;
+  position: relative;
+}
+.backup .toggle-radio:before {
+  position: absolute;
+  content: "";
+  width: 0px;
+  height: 0px;
+  border-radius: 50%;
+  background-color: var(--blue-alt);
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  transition: 0.3s;
+}
+.backup input[type="radio"]:checked + .toggle-radio:before {
+  width: 15px;
+  height: 15px;
+}
+.backup label:hover .toggle-radio,
+.backup input[type="radio"]:checked + .toggle-radio {
+  border-color: var(--blue-alt);
+}
+.backup .choises {
+  border-top: 1px solid var(--grey-border);
+  padding: 20px;
+  margin-top: 20px;
+  gap: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.backup .choises > label {
+  border: 2px solid var(--grey-border);
+  padding: 20px 30px;
+  border-radius: 10px;
+  cursor: pointer;
+  display: block;
+  text-align: center;
+  width: calc((100% -20px- 20px) / 3);
+}
+.backup .choises > label > span {
+  display: block;
+  margin-top: 10px;
+  font-weight: 500;
+}
+.backup .choises input:checked + label {
+  border-color: var(--blue-alt);
+}
+.backup .choises input:checked + label > i,
+.backup .choises input:checked + label > span {
+  color: var(--blue-alt);
+}
+@media (max-width: 768px) {
+  .backup .choises {
+    display: block;
+  }
+  .backup .choises > label {
+    width: 100%;
+    margin-top: 20px;
+  }
+}
+/*end backup*/
